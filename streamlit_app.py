@@ -13,17 +13,17 @@ if "click_count" not in st.session_state:
     st.session_state.tie = 0
 
 left, middle, right = st.columns(3)
-if left.button("Rock button", use_container_width=True):
+if left.button("✊ Rock", use_container_width=True):
     st.session_state.click_count += 1
     st.session_state.pym = "Rock"
-if middle.button("Paper button", use_container_width=True):
+if middle.button("🖐️ Paper", use_container_width=True):
     st.session_state.click_count += 1
     st.session_state.pym = "Paper"
-if right.button("Scissors button", use_container_width=True):
+if right.button("✌️ Scissors", use_container_width=True):
     st.session_state.click_count += 1
     st.session_state.pym = "Scissors"
 
-if st.button("Reset"):
+if st.button("Reset / New Game"):
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Win", st.session_state.win)
@@ -106,7 +106,7 @@ if st.session_state.click_count != 0:
     ply_.image(img_play, caption="Your Move")
     rf_.metric("Win", st.session_state.win)
     rf_.metric("Loss", st.session_state.loss)
-    
+
     xx, yy, zz = st.columns(3)
     xx.write("")
     yy.metric("", txt)
