@@ -109,7 +109,7 @@ if st.session_state.click_count != 0:
 
     xx, yy, zz = st.columns(3)
     xx.write("")
-    yy.metric("", txt)
+    yy.metric("this round", txt)
     zz.write("")
 
 ## streamlit run TEST02_StreamLit.py
