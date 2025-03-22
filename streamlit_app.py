@@ -78,13 +78,7 @@ if st.session_state.click_count != 0:
     # st.write(f"Computer_move => {random_choice}")  # ผลลัพธ์ที่ได้จะแตกต่างกันไปในแต่ละครั้งที่รัน
     # st.write(f"Player_move => {player_choice}") # ผลลัพธ์จากการเลือกของผู้เล่นแต่ละครั้ง
 
-    lf_, com_, ply_, rf_ = st.columns(4)
-    lf_.metric("Round", st.session_state.click_count)
-    lf_.metric("Tie", st.session_state.tie)
-    com_.image(img_comp, caption="Computer Move")
-    ply_.image(img_play, caption="Your Move")
-    rf_.metric("Win", st.session_state.win)
-    rf_.metric("Loss", st.session_state.loss)
+
 
     # if loop เฉพาะ tie กับ loss นอกนั้น win
     if (player_choice == "" and random_choice == ""):
@@ -105,6 +99,14 @@ if st.session_state.click_count != 0:
         txt = "- You Win 😎 -"
         st.session_state.win += 1
 
+    lf_, com_, ply_, rf_ = st.columns(4)
+    lf_.metric("Round", st.session_state.click_count)
+    lf_.metric("Tie", st.session_state.tie)
+    com_.image(img_comp, caption="Computer Move")
+    ply_.image(img_play, caption="Your Move")
+    rf_.metric("Win", st.session_state.win)
+    rf_.metric("Loss", st.session_state.loss)
+    
     xx, yy, zz = st.columns(3)
     xx.write("")
     yy.metric("", txt)
