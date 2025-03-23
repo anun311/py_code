@@ -47,5 +47,4 @@ st.text(f"var_wt: {var_wt}")
 st.text(f"var_am: {var_am}")
 st.text(f"mpg_: {mpg_}")
 
-
 # streamlit run STL02_LinearRegression.py
