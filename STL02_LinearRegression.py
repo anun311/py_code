@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 
 # โหลดโมเดลจากไฟล์ .pkl
-
-with open('anun311/py_code/main/mtcar_linear_reg_model.pkl', 'rb') as f:
+ss = "https://github.com/anun311/py_code/blob/9b596cb84aa702d0f0a333d54b13b4e710af111d/mtcar_linear_reg_model.pkl"
+with open(ss, 'rb') as f:
     model = pickle.load(f)
 
 print("Coefficients:", model.coef_)
