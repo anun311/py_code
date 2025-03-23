@@ -4,15 +4,10 @@ import pandas as pd
 import requests
 import io
 
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
 from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 import statsmodels.api as sm
 import math
-import seaborn as sns
 
 # URL ของไฟล์ .pkl บน GitHub (แทนที่ด้วย URL ของคุณ)
 model_url = 'https://raw.githubusercontent.com/anun311/py_code/refs/heads/main/mtcar_linear_reg_model.pkl'
