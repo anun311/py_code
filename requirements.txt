@@ -2,5 +2,4 @@ streamlit
 scikit-learn
 pandas
 numpy
-statsmodels
 math
