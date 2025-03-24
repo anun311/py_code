@@ -1,4 +1,6 @@
 import requests
+import pickle
+
 # URL ของไฟล์ .pkl บน GitHub (แทนที่ด้วย URL ของคุณ)
 model_url = 'https://raw.githubusercontent.com/anun311/py_code/refs/heads/main/mtcar_linear_reg_model.pkl'
 
