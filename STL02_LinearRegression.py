@@ -2,7 +2,6 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
-import math
 
 st.header("Python 🐍 Project Model")
 st.write("Created by Feasible")
