@@ -141,7 +141,7 @@ with tab2:
     มาจากการวิเคราะห์ตัวแปรต้น (x) ได้แก่
         1) จำนวนครั้งที่ตั้งครรภ์ 2) ระดับน้ำตาลกลูโคสในเลือด  3) ค่าความดันโลหิตตัวล่าง 
         4) ดัชนีมวลกาย (BMI) และ 5) ฟังก์ชันประวัติโรคเบาหวาน
-    ซึ่งผลการทดสอบตัวแปรและการวัดผลโมเดลมีรายละเอียด ดังนี้ ...
+    ซึ่งผลการวัดผลโมเดลมีรายละเอียด ดังนี้ ...
         - Observations: 154
         - Accuracy: 0.79
         - Precision: 0.63
@@ -151,7 +151,7 @@ with tab2:
     Outcome = {lg_inter_} + ({coef_pregnancies} x pregnancies) 
         + ({coef_glucose} x glucose) + ({coef_bp} x bp) 
         + ({coef_bmi} x bmi) + ({coef_dmpedfunc} x diabetespedigreefunction)""")
-        url = "https://feasibleth.com/"
+        url = "https://feasibleth.com/logistic-regression-dm/"
         st.write("""คุณผู้อ่านสามารถอ่านรายละเอียด mini project นี้ ได้ที่: %s """% url)
     
     st.subheader("ระบุตัวเลือกเพื่อทำนาย")
@@ -161,14 +161,14 @@ with tab2:
         pregnancies_number = st.number_input("จำนวนครั้งที่ตั้งครรภ์", min_value=0.0, max_value=20.0, step=1.0, value=6.0)
         st.write( "Pregnancies:", pregnancies_number)
 
-        bp_number = st.number_input("ค่าความดันโลหิตตัวล่าง", min_value=60.0, max_value=125.0, step=5.0, value=62.0)
+        bp_number = st.number_input("ค่าความดันโลหิตตัวล่าง (mmHg)", min_value=60.0, max_value=125.0, step=5.0, value=62.0)
         st.write( "Blood pressure:", bp_number)
 
         dmpedfunc_number = st.number_input("ฟังก์ชันประวัติโรคเบาหวาน", min_value=0.005, max_value=3.000, step=1.000, value=0.178)
         st.write( "Diabetes pedigree function:", round(dmpedfunc_number, 4))
 
     with col2:
-        glucose_number = st.number_input("ระดับน้ำตาลกลูโคสในเลือด", min_value=50.0, max_value=220.0, step=1.0, value=162.0)
+        glucose_number = st.number_input("ระดับน้ำตาลกลูโคสในเลือด (mg/dL)", min_value=50.0, max_value=220.0, step=1.0, value=162.0)
         st.write("Glucose:", glucose_number)
 
         bmi_number = st.number_input("ดัชนีมวลกาย (BMI)", min_value=10.0, max_value=70.0, step=1.0, value=24.3)
